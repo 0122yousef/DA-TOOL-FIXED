@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CCCA0F7-1AB6-42A3-9828-CC71A2E2EF56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PornHub</RootNamespace>
+    <AssemblyName>PornHub</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>PornHub.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReaLTaiizor" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Branding\GetControls.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Offsets.cs" />
+    <Compile Include="Game\PlayerFunctions.cs" />
+    <Compile Include="Game\Threads.cs" />
+    <Compile Include="HyperMEM.cs" />
+    <Compile Include="LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memory\Log.cs" />
+    <Compile Include="Memory\Logic\Enums\MDriverLoad.cs" />
+    <Compile Include="Memory\Logic\Enums\MIoMethod.cs" />
+    <Compile Include="Memory\Logic\Interfaces\MIDriver.cs" />
+    <Compile Include="Memory\Logic\Interfaces\MIDriverIo.cs" />
+    <Compile Include="Memory\Logic\Interfaces\MIDriverLoad.cs" />
+    <Compile Include="Memory\Logic\Loaders\MServiceLoad.cs" />
+    <Compile Include="Memory\Logic\MDriver.cs" />
+    <Compile Include="Memory\Logic\MDriverConfig.cs" />
+    <Compile Include="Memory\Logic\MDriverIo.cs" />
+    <Compile Include="Memory\Logic\MDriverIoShared.cs" />
+    <Compile Include="Memory\MEME\Requests.cs" />
+    <Compile Include="Memory\MEME\Structures\KernelReadRequest.cs" />
+    <Compile Include="Memory\MEME\Structures\KernelWriteRequest.cs" />
+    <Compile Include="Memory\Native\Enums\AccessMask.cs" />
+    <Compile Include="Memory\Native\Enums\EventType.cs" />
+    <Compile Include="Memory\Native\Enums\Memory\MemoryPagePermissions.cs" />
+    <Compile Include="Memory\Native\Enums\Memory\MemoryPageState.cs" />
+    <Compile Include="Memory\Native\Enums\Memory\MemoryPageType.cs" />
+    <Compile Include="Memory\Native\Enums\NtStatus.cs" />
+    <Compile Include="Memory\Native\Enums\ProcessorArchitecture.cs" />
+    <Compile Include="Memory\Native\Enums\SectionInherit.cs" />
+    <Compile Include="Memory\Native\Enums\Services\ScmAccess.cs" />
+    <Compile Include="Memory\Native\Enums\Services\ServiceAccess.cs" />
+    <Compile Include="Memory\Native\Enums\Services\ServiceError.cs" />
+    <Compile Include="Memory\Native\Enums\Services\ServiceStart.cs" />
+    <Compile Include="Memory\Native\Enums\Services\ServiceType.cs" />
+    <Compile Include="Memory\Native\MemoryBasicInformation.cs" />
+    <Compile Include="Memory\Native\OBJECT_ATTRIBUTES.cs" />
+    <Compile Include="Memory\Native\UNICODE_STRING.cs" />
+    <Compile Include="Memory\Native\WinApi.cs" />
+    <Compile Include="Memory\Utilities\MService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Security\Crypto.cs" />
+    <Compile Include="Security\Functions.cs" />
+    <Compile Include="Security\HardwareID.cs" />
+    <Compile Include="Security\Scanner.cs" />
+    <Compile Include="Security\UserInfo.cs" />
+    <Compile Include="Security\WebAuth.cs" />
+    <Compile Include="Security\WindowsInfo.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\AccessMask.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\DriverLoad.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\NtStatus.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\Services\ScmAccess.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\Services\ServiceAccess.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\Services\ServiceError.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\Services\ServiceStart.cs" />
+    <Compile Include="WeGotSkills\Driver\Loader\Enums\Services\ServiceType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <DependentUpon>Resources.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\D3Driver.sys">
+      <CustomToolNamespace>XDD</CustomToolNamespace>
+    </None>
+    <None Include="Resources\XDDriver.sys" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="ReaLTaiizor.dll" />
+    <None Include="Resources\Loader.exe" />
+    <None Include="Resources\NN.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
